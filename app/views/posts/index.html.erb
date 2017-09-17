@@ -1,16 +1,22 @@
 <h1>Photo Blog</h1>
 
-<div class="container">
-<% @posts.each do |p| %>
-        <ul class="posts">
-        <li><%= link_to(image_tag(p.image.url(:medium)), post_path(p)) %></li>
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
         
-        <li>Posted <%= time_ago_in_words(p.created_at) %> ago.</li>
-        <li><%= p.caption %></li>
-        <li>Location: <%= p.location %></li>
-        <li><%= p.blog %></li>
-    </ul>
-<% end %>
+        <% @posts.each do |p| %>
+        <div class="col-md-8">
+            <ul class="posts">
+            <li><%= link_to(image_tag(p.image.url(:medium)), post_path(p)) %></li>
+            
+            <li>Posted <%= time_ago_in_words(p.created_at) %> ago.</li>
+            <li><%= p.caption %></li>
+            <li>Location: <%= p.location %></li>
+            <li><%= p.blog %></li>
+        </ul>
+        </div>
+        <% end %>
+        
+    </div>
 </div>
 <button><%= link_to 'New Post', new_post_path %></button>
 
