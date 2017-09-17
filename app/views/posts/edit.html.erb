@@ -1,15 +1,16 @@
-
-<h1>New Entry</h1>
-
+<h1>Edit Blog Post</h1>
 <div class="container-fluid">
     <div class="row justify-content-md-center">
      <div class="col-md-8 edit-post">
+        <div class="img">
+            <%= image_tag(@post.image.url(:medium)) %>
+        </div>
         <%= simple_form_for(@post, html: { class: 'form-horizontal' }) do |f| %>
             <%= f.input :image %>
-            <%= f.input :caption, input_html: { maxlength: 50 }, placeholder: 'Hello world' %>
-            <%= f.input :location, input_html: { maxlength: 50 }, placeholder: 'Sydney' %>
-            <%= f.input :blog, placeholder: 'Tell me about it' %>
-            <%= f.button :submit, class: 'btn-success' %>
+            <%= f.input :caption, input_html: { maxlength: 50 } %>
+            <%= f.input :location, input_html: { maxlength: 50 }%>
+            <%= f.input :blog %>
+            <%= f.button :submit, class: 'btn btn-success' %>
         <% end %>
         </br>
         <button class='btn btn-primary'><%= link_to 'Cancel', root_path %></button>

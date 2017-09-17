@@ -6,15 +6,19 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  
+    <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Montserrat:400,700', type='text/css' %>
+    
   </head>
 
   <body>
     
     <div class="container">
-      <%= yield %>
       <% flash.each do |message_type, msg| %>
-          <%= content_tag(:div, msg, class: "alert alert-#{message_type}") %>
+          <%= content_tag(:div, msg, class: "alert " + alert_for(message_type)) %>
       <% end %>
+      <%= yield %>
+      
     </div>
   </body>
 </html>

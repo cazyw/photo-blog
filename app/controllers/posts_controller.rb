@@ -18,10 +18,26 @@ class PostsController < ApplicationController
             flash[:success] = "Image blog post created"
             redirect_to @post
         else
-            flash[:alert] = "Warning: no image was added!"
+            flash[:alert] = "Warning: required fields not completed!"
             render :new
         end
 
+    end
+
+    def edit
+        @post = Post.find(params[:id])
+    end
+
+    def update
+        @post = Post.find(params[:id])
+        @post.update(post_params)
+        if @post.save
+            flash[:success] = "Bblog post updated!"
+            redirect_to(post_path(@post))
+        else
+            flash[:alert] = "Warning: something's gone teribly wrong!"
+            render :edit
+        end
     end
 
     private

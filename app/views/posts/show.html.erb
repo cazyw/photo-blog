@@ -1,10 +1,17 @@
 <h1>Photo Blog Entry</h1>
-<div class="container">
-<ul>
-<li><%= image_tag(@post.image.url(:medium)) %></li>
-<li><%= @post.caption %></li>
-<li><%= @post.location %></li>
-<li><%= @post.blog %></li>
-</ul>
-<button><%= link_to "Home", root_path %></button>
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class="col-md-8">
+        <ul>
+            <li class="img"><%= image_tag(@post.image.url(:medium)) %></li>
+            <li><%= @post.caption %></li>
+            <li><%= @post.location %></li>
+            <li><%= @post.blog %></li>
+        </ul>
+        </div>
+    </div>
+    <div class="row justify-content-md-center">
+        <button class='btn btn-success'><%= link_to "Home", root_path %></button>  <span class="black"> ... </span>
+        <button class='btn btn-info'><%= link_to "Edit Post", edit_post_path(@post) %></button>
+    </div>
 </div>

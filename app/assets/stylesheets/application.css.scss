@@ -15,25 +15,76 @@
 
 @import "bootstrap";
 $gray-medium-light: #eaeaea;
+$background-g: #6A7B86;
+$background-o: #E66000;
+$background-dg: #424F5A;
 
 body {
-    background-color: #E66000;
-    
+    background-color: $background-dg;
+    font-family: 'Montserrat', sans-serif;
 }
 
 h1 {
     text-align: center;
     color: #FFF;
+    font-weight: 700;
+    margin-top: 20px;
 }
 
 ul {
     background-color: #EAEFF2;
     list-style: none;
     margin: 20px;
+    padding: 10px 20px;
     li {
       overflow: auto;
-      padding: 10px 0;
+      padding: 5px 0;
     }
 
     border: 1px solid $gray-medium-light;
+}
+
+li img, li a{
+    display:block;
+    margin:0 auto;
+}
+
+img {
+    display: block;
+    margin: 20px auto;
+
+}
+
+a:link, a:visited, a:hover, a:active {
+    color: #FFF;
+}
+
+.tiny-font {
+    font-size: 0.5em;
+}
+
+.edit-post {
+    background-color: #FFF;
+    padding: 10px;
+}
+
+.alert {
+    margin: 20px auto;
+}
+
+.black {
+    color: $background-dg;
+}
+
+
+.field_with_errors {
+    background-color: #ff3333;
+  }
+  
+.simple_form .help-block {
+    color: #b94a48;;
+}
+
+.simple_form .has-error .form-control {
+    border: 1px solid #b94a48;;
 }
