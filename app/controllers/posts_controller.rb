@@ -13,7 +13,14 @@ class PostsController < ApplicationController
 
     def create
         @post = Post.create(post_params)
-        redirect_to @post
+        if @post.save
+            flash[:success] = "Image blog post created"
+            redirect_to @post
+        else
+            flash[:alert] = "Warning: no image was added!"
+            render :new
+        end
+
     end
 
     private

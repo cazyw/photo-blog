@@ -12,4 +12,14 @@ feature 'Creating posts' do
         expect(page).to have_content('#foodart')
         expect(page).to have_css("img[src*='circa.jpg']")
     end
+
+    scenario 'needs an image to create a post' do
+        visit '/'
+        click_link 'New Post'
+        fill_in 'Caption', with: 'yummo #foodart'
+        fill_in 'Location', with: 'Circa'
+        fill_in 'Blog', with: 'This was a delicious brunch at Circa. Waited for over an hour but it was definitely worth the wait. Not only looks fantastic but wow, delicious!'
+        click_button 'Create Post'
+        expect(page).to have_content('Warning: no image was added!')
+    end
 end
