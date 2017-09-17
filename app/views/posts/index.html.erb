@@ -1,13 +1,13 @@
 <h1>Photo Blog</h1>
 
 <div class="container">
-<%= @posts.each do |p| %>
-    <ul class="posts">
-    <li><%= image_tag p.image.url(:medium) %></li>
-    <li><%= p.created_at %></li>
-    <li><%= p.caption %></li>
-    <li>Location: <%= p.location %></li>
-    <li><%= p.blog %></li>
+<% @posts.each do |p| %>
+        <ul class="posts">
+        <li><%= image_tag p.image.url(:medium) %></li>
+        <li>Posted <%= time_ago_in_words(p.created_at) %> ago.</li>
+        <li><%= p.caption %></li>
+        <li>Location: <%= p.location %></li>
+        <li><%= p.blog %></li>
     </ul>
 <% end %>
 </div>
