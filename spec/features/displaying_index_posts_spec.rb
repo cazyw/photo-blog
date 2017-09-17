@@ -12,4 +12,6 @@ feature 'Index displays a list of posts' do
         expect(page).to have_content('Third post')
         expect(page).to have_css("img[src*='circa.jpg']")
     end
+
 end
+

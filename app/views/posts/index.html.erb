@@ -3,7 +3,8 @@
 <div class="container">
 <% @posts.each do |p| %>
         <ul class="posts">
-        <li><%= image_tag p.image.url(:medium) %></li>
+        <li><%= link_to(image_tag(p.image.url(:medium)), post_path(p)) %></li>
+        
         <li>Posted <%= time_ago_in_words(p.created_at) %> ago.</li>
         <li><%= p.caption %></li>
         <li>Location: <%= p.location %></li>
@@ -12,3 +13,4 @@
 <% end %>
 </div>
 <button><%= link_to 'New Post', new_post_path %></button>
+
