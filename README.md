@@ -1,9 +1,6 @@
 # Photo Blog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
 
 ## Environment
 
@@ -74,6 +71,17 @@ Gems that had to be added:
 * bootstrap (`gem 'bootstrap', '~> 4.0.0.beta'`) - bootstrap [https://github.com/twbs/bootstrap-rubygem]
 * paperclip (`gem "paperclip", "~> 5.0.0"`) - file attachment management [https://github.com/thoughtbot/paperclip]
 * ImageMagick - required for paperclip 
+
+bundle initially was not working when running in the Visual Studio Code terminal (it was working using git bash). The problem was that the path could not be located. Following a suggestion on the web, I replaced the code in C:\RailsInstaller\Ruby2.3.0\bin\bundle.bat to
+
+```
+@ECHO OFF
+IF NOT "%~f0" == "~f0" GOTO :WinNT
+ECHO.This version of Ruby has not been built with support for Windows 95/98/Me.
+GOTO :EOF
+:WinNT
+@"%~dp0ruby.exe" "%~dpn0" %*
+```
 
 Using simple form for simple form creation. Added bootstrap for styling.
 
