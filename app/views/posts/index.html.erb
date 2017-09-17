@@ -1,3 +1,14 @@
 <h1>Photo Blog</h1>
 
+<div class="container">
+<%= @posts.each do |p| %>
+    <ul class="posts">
+    <li><%= image_tag p.image.url(:medium) %></li>
+    <li><%= p.created_at %></li>
+    <li><%= p.caption %></li>
+    <li>Location: <%= p.location %></li>
+    <li><%= p.blog %></li>
+    </ul>
+<% end %>
+</div>
 <button><%= link_to 'New Post', new_post_path %></button>

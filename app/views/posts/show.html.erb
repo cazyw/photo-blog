@@ -1,5 +1,9 @@
-<h1>...</h1>
-<%= image_tag(@post.image.url(:medium)) %>
-<%= @post.caption %>
-<%= @post.location %>
-<%= @post.blog %>
+<h3>Photo Blog Entry</h3>
+<div class="container">
+<ul>
+<li><%= image_tag(@post.image.url(:medium)) %></li>
+<li><%= @post.caption %></li>
+<li><%= @post.location %></li>
+<li><%= @post.blog %></li>
+</ul>
+</div>

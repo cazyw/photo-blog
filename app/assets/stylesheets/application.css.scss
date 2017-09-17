@@ -12,4 +12,21 @@
  *
  */
 // Custom bootstrap variables must be set or imported *before* bootstrap.
+
 @import "bootstrap";
+$gray-medium-light: #eaeaea;
+
+h1 {
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    margin: 20px;
+    li {
+      overflow: auto;
+      padding: 10px 0;
+    }
+
+    border: 1px solid $gray-medium-light;
+}

@@ -10,8 +10,10 @@
 
   <body>
     <%= yield %>
-    <%= flash.each do |name, msg| %>
-        <%= content_tag :div, msg, class: [:alert, alert_for(name)] %>
-    <% end %>
+    <div class="container">
+      <%= flash.each do |message_type, msg| %>
+          <%= content_tag(:div, msg, class: "alert alert-#{message_type}") %>
+      <% end %>
+    </div>
   </body>
 </html>
