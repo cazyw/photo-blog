@@ -54,4 +54,5 @@ bundle exec rspec spec/controllers/accounts_controller_spec.rb:8
 ## Discussion
 
 Gems that had to be added:
-* rspec-rails (`gem 'rspec-rails', '~> 3.6'`)
+* rspec-rails (`gem 'rspec-rails', '~> 3.6'`) - for test driven development
+* capybara (`gem 'capybara'`)- for testing web applications by simulating user input
