@@ -85,17 +85,6 @@ GOTO :EOF
 
 Using simple form for simple form creation. Added bootstrap for styling.
 
-ImageMagick - getting picture resizing to work for me also required the rmagick gem. I downloaded ImageMagick from their website [https://www.imagemagick.org/script/download.php] and installed it and also added the rmagick gem to my gemfile. I then ran into extconf errors until I restarted my computer which fixed up the path errors.
-
-Important notes:
-
-* ImageMagick must be installed in a directory with no whitespaces in the path
-* choose a bit version of imagemagick that matches the bit version of ruby (32bit) - ImageMagick-7.0.7-2-Q16-x86-dll.exe
-
-
-
-
-
 Creation
 
 rails g controller posts
