@@ -51,7 +51,7 @@ li img, li a{
 
 img {
     display: block;
-    margin: 20px auto;
+    margin: 10px auto;
 }
 
 footer.footer ul {
@@ -62,6 +62,31 @@ footer.footer ul {
 
 a:link, a:visited, a:hover, a:active {
     color: #FFF;
+}
+
+
+
+.posts {
+    background-color: #EAEFF2;
+    margin: 20px;
+    padding: 10px 20px;
+    border: 1px solid $gray-medium-light;
+}
+
+.top-post {
+    height: 320px;
+    margin: auto;
+}
+
+.index-img {
+    width: 320px;
+    height: 320px;
+    float: left;
+}
+.index-titles {
+    padding: 10px;
+    margin-left: 320px;
+    height: 320px;
 }
 
 .tiny-font {
@@ -100,4 +125,8 @@ a:link, a:visited, a:hover, a:active {
 
 .show-width {
     width: 700px;
+}
+
+.index-img {
+    float: left;
 }

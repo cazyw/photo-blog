@@ -1,7 +1,5 @@
 <h1>Photo Blog</h1>
 
-
-
 <div class="container-fluid">
     <div class="row justify-content-md-center">
         <button class='btn btn-success'><%= link_to 'New Post', new_post_path %></button>
@@ -10,13 +8,17 @@
         
         <% @posts.each do |p| %>
         <div class="show-width">
-            <ul class="posts">
-            <li><%= link_to(image_tag(p.image.url(:medium)), post_path(p)) %></li>
-            <li class="tiny-font text-center">Posted <%= time_ago_in_words(p.created_at) %> ago.</li>
-            <li><%= p.caption %></li>
-            <li>Location: <%= p.location %></li>
-            <li><%= p.blog %></li>
-        </ul>
+            <div class="posts">
+                <div class="tiny-font text-center">Posted <%= time_ago_in_words(p.created_at) %> ago.</div>
+                <div class="top-post">
+                    <div class="index-img"><%= link_to(image_tag(p.image.url(:medium)), post_path(p)) %></div>
+                    <div class="index-titles">
+                        <p><%= p.caption %></p> 
+                        <p>Location: <%= p.location %></p>
+                    </div>
+                </div>
+                <div><%= p.blog %></div>
+            </div>
         </div>
         <% end %>
         
