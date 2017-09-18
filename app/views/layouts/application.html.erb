@@ -13,12 +13,13 @@
 
   <body>
     
-    <div class="container">
+    <div class="container-fluid">
       <% flash.each do |message_type, msg| %>
           <%= content_tag(:div, msg, class: "alert " + alert_for(message_type)) %>
       <% end %>
       <%= yield %>
       
     </div>
+    <%= render 'layouts/footer' %>
   </body>
 </html>

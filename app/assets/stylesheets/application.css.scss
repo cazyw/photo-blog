@@ -52,7 +52,12 @@ li img, li a{
 img {
     display: block;
     margin: 20px auto;
+}
 
+footer.footer ul {
+    text-align: center;
+    background-color: $background-dg;
+    border-style: none;
 }
 
 a:link, a:visited, a:hover, a:active {
@@ -91,4 +96,8 @@ a:link, a:visited, a:hover, a:active {
 
 .simple_form .has-error .form-control {
     border: 1px solid #b94a48;;
+}
+
+.show-width {
+    width: 700px;
 }

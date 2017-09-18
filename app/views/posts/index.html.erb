@@ -9,10 +9,9 @@
     <div class="row justify-content-md-center">
         
         <% @posts.each do |p| %>
-        <div class="col-md-8">
+        <div class="show-width">
             <ul class="posts">
             <li><%= link_to(image_tag(p.image.url(:medium)), post_path(p)) %></li>
-            
             <li class="tiny-font text-center">Posted <%= time_ago_in_words(p.created_at) %> ago.</li>
             <li><%= p.caption %></li>
             <li>Location: <%= p.location %></li>

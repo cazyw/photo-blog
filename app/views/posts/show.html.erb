@@ -1,9 +1,9 @@
-<h1>Photo Blog Entry</h1>
+
 <div class="container-fluid">
     <div class="row justify-content-md-center">
-        <div class="col-md-8">
+        <div class="show-width">
         <ul>
-            <li class="img"><%= image_tag(@post.image.url(:medium)) %></li>
+            <li class="img"><%= image_tag(@post.image.url(:large)) %></li>
             <li><%= @post.caption %></li>
             <li><%= @post.location %></li>
             <li><%= @post.blog %></li>
