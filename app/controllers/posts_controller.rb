@@ -32,12 +32,19 @@ class PostsController < ApplicationController
         @post = Post.find(params[:id])
         @post.update(post_params)
         if @post.save
-            flash[:success] = "Bblog post updated!"
+            flash[:success] = "Blog post updated!"
             redirect_to(post_path(@post))
         else
             flash[:alert] = "Warning: something's gone teribly wrong!"
             render :edit
         end
+    end
+
+    def destroy
+        @post = Post.find(params[:id])
+        @post.destroy
+        flash[:success] = "Post deleted!"
+        redirect_to posts_path
     end
 
     private

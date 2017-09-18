@@ -10,7 +10,13 @@ feature 'Editing posts' do
     scenario 'can edit a post' do
         fill_in 'Caption', with: 'Ooooh that is goooood!'
         click_button 'Update Post'
-        expect(page).to have_content('Bblog post updated!')
+        expect(page).to have_content('Blog post updated!')
         expect(page).to have_content('Ooooh that is goooood!')
+    end
+
+    scenario 'no image raises an error' do
+        attach_file('Image', "")
+        click_button 'Update Post'
+        expect(page).to have_content('Something seems to be missing!')
     end
 end

@@ -1,4 +1,4 @@
-<h1>Photo Blog</h1>
+<h1>Photo Blog - Food for the Soul</h1>
 
 <div class="container-fluid">
     <div class="row justify-content-md-center">
@@ -15,9 +15,10 @@
                     <div class="index-titles">
                         <p><%= p.caption %></p> 
                         <p>Location: <%= p.location %></p>
+                        <p><%= truncate p.blog, length: 160 %></p>
                     </div>
                 </div>
-                <div><%= p.blog %></div>
+                
             </div>
         </div>
         <% end %>

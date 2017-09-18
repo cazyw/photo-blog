@@ -17,9 +17,18 @@
       <% flash.each do |message_type, msg| %>
           <%= content_tag(:div, msg, class: "alert " + alert_for(message_type)) %>
       <% end %>
+      <% flash.clear %>
       <%= yield %>
       
     </div>
     <%= render 'layouts/footer' %>
   </body>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      setTimeout(function(){
+        $('.alert').slideUp(500);
+      }, 1000);
+    })
+  </script>
 </html>
