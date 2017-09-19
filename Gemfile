@@ -33,6 +33,7 @@ gem 'simple_form'
 gem 'bootstrap', '~> 4.0.0.beta'
 gem 'sprockets-rails'
 gem "paperclip", "~> 5.0.0"
+gem 'devise'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'

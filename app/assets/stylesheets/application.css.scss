@@ -12,8 +12,8 @@
  *
  */
 // Custom bootstrap variables must be set or imported *before* bootstrap.
-
 @import "bootstrap";
+
 $gray-medium-light: #eaeaea;
 $background-g: #6A7B86;
 $background-o: #E66000;
@@ -66,6 +66,10 @@ a:link, a:visited, a:hover, a:active {
 
 .btn {
     border-radius: 0;
+}
+
+.centered {
+    margin: 0 auto;
 }
 
 .posts {

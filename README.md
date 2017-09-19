@@ -1,10 +1,10 @@
 # Photo Blog
 
-
+Photo blog to keep track of interesting photos
 
 ## Environment
 
-Built and tested on Windows 10 Home 
+Built and tested in Windows 10 Home 
 
 ## System Dependencies & Configuration
 
@@ -71,6 +71,7 @@ Gems that had to be added:
 * bootstrap (`gem 'bootstrap', '~> 4.0.0.beta'`) - bootstrap [https://github.com/twbs/bootstrap-rubygem]
 * paperclip (`gem "paperclip", "~> 5.0.0"`) - file attachment management [https://github.com/thoughtbot/paperclip]
 * ImageMagick - required for paperclip 
+* Devise (`gem 'devise'`) - for user authentication
 
 bundle initially was not working when running in the Visual Studio Code terminal (it was working using git bash). The problem was that the path could not be located. Following a suggestion on the web, I replaced the code in C:\RailsInstaller\Ruby2.3.0\bin\bundle.bat to
 
@@ -83,7 +84,7 @@ GOTO :EOF
 @"%~dp0ruby.exe" "%~dpn0" %*
 ```
 
-Using simple form for simple form creation. Added bootstrap for styling.
+Using simple form for simple form creation. Added bootstrap (version 4) for styling.
 
 Creation
 

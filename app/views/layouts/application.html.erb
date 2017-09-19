@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Photoblog</title>
     <%= csrf_meta_tags %>
 
@@ -13,6 +14,8 @@
 
   <body>
     
+
+
     <div class="container-fluid">
       <% flash.each do |message_type, msg| %>
           <%= content_tag(:div, msg, class: "alert " + alert_for(message_type)) %>
