@@ -38,6 +38,10 @@ gem 'devise'
 gem 'popper_js', '~> 1.12.3'
 gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
 gem 'jquery-minicolors-rails'
+
+
+gem 'rails-assets-tether', '>= 1.1.0'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password

@@ -11,11 +11,12 @@
 // about supported directives.
 //
 //= require jquery
+//= require tether
+//= require jquery_ujs
 //= require jquery.minicolors
 //= require jquery.minicolors.simple_form
 //= require popper
 //= require bootstrap
-//= require jquery_ujs
 //= require turbolinks
 //= require_tree .
 
