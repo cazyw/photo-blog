@@ -30,11 +30,12 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'capybara'
 gem 'simple_form'
-gem 'bootstrap', '~> 4.0.0.beta'
+gem 'bootstrap', '=4.0.0.alpha6'
 gem 'sprockets-rails'
 gem "paperclip", "~> 5.0.0"
 gem 'devise'
-
+gem 'popper_js', '~> 1.12.3'
+gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password

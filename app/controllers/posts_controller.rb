@@ -1,11 +1,11 @@
 class PostsController < ApplicationController
+    before_action :set_post, only: [:show, :edit, :update,   :destroy]
 
     def index
         @posts = Post.all
     end
 
     def show
-        @post = Post.find(params[:id])
     end
 
     def new
@@ -25,31 +25,35 @@ class PostsController < ApplicationController
     end
 
     def edit
-        @post = Post.find(params[:id])
     end
 
     def update
-        @post = Post.find(params[:id])
         @post.update(post_params)
         if @post.save
             flash[:success] = "Blog post updated!"
-            redirect_to(post_path(@post))
+            redirect_to post_path
         else
-            flash[:alert] = "Warning: something's gone teribly wrong!"
+            flash[:alert] = "Warning: something's gone teribly wrong and it didn't update!"
             render :edit
         end
     end
 
     def destroy
-        @post = Post.find(params[:id])
-        @post.destroy
-        flash[:success] = "Post deleted!"
-        redirect_to posts_path
+        if @post.destroy
+            flash[:success] = "Post deleted!"
+            redirect_to posts_path
+        else
+            flash[:alert] = "Warning: the post wasn't deleted!"
+        end
     end
 
     private
     
         def post_params
             params.require(:post).permit(:image, :caption, :location, :blog)
+        end
+
+        def set_post
+            @post = Post.find(params[:id])
         end
 end

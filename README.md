@@ -86,6 +86,19 @@ GOTO :EOF
 
 Using simple form for simple form creation. Added bootstrap (version 4) for styling.
 
+Ran into issues with bcrypt as well (which is used by devise) as devise installed
+```
+$gem list bcrypt
+bcrypt (3.1.11 x86-mingw32)
+```
+
+Solved by
+gem uninstall devise && gem uninstall bcrypt
+gem install bcrypt --platform=ruby
+Added gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt' and bundle install
+```
+
+Make sure the bcrypt version is just bcrypt (3.1.11)
 Creation
 
 rails g controller posts

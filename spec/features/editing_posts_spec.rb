@@ -15,8 +15,8 @@ feature 'Editing posts' do
     end
 
     scenario 'no image raises an error' do
-        attach_file('Image', "")
+        attach_file('Image', "spec/files/images/blank.txt")
         click_button 'Update Post'
-        expect(page).to have_content('Something seems to be missing!')
+        expect(page).to have_content("Warning: something's gone teribly wrong and it didn't update!")
     end
 end

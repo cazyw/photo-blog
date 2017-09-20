@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <title>Photoblog</title>
     <%= csrf_meta_tags %>
 
@@ -14,7 +17,7 @@
 
   <body>
     
-
+    <%= render 'layouts/navbar' %>
 
     <div class="container-fluid">
       <% flash.each do |message_type, msg| %>
@@ -31,7 +34,7 @@
     $(document).ready(function(){
       setTimeout(function(){
         $('.alert').slideUp(500);
-      }, 1000);
+      }, 3000);
     })
   </script>
 </html>
