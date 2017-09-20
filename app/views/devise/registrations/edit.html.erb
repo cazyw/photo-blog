@@ -1,4 +1,8 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<h1>Edit <%= resource_name.to_s.humanize %></h1>
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+     <div class="col-md-8 edit-post">
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
@@ -26,3 +30,7 @@
 <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
 <%= link_to "Back", :back %>
+
+        </div>
+    </div>
+</div>

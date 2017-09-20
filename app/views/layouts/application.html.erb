@@ -19,7 +19,7 @@
     
     <%= render 'layouts/navbar' %>
 
-    <div class="container-fluid">
+    <div class="container-fluid flash-top">
       <% flash.each do |message_type, msg| %>
           <%= content_tag(:div, msg, class: "alert " + alert_for(message_type)) %>
       <% end %>
