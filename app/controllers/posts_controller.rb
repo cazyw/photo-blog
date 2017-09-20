@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
     before_action :authenticate_user!, :except => [:show, :index]
     before_action :set_post, only: [:show, :edit, :update, :destroy]
+    before_action :is_user_post, only: [:edit, :update, :destroy]
     
 
     def index
@@ -11,14 +12,14 @@ class PostsController < ApplicationController
     end
 
     def new
-        @post = Post.new
+        @post = current_user.posts.build
     end
 
     def create
-        @post = Post.create(post_params)
+        @post = current_user.posts.build(post_params)
         if @post.save
             flash[:success] = "Image blog post created"
-            redirect_to @post
+            redirect_to posts_path
         else
             flash[:alert] = "Warning: required fields not completed!"
             render :new
@@ -57,5 +58,12 @@ class PostsController < ApplicationController
 
         def set_post
             @post = Post.find(params[:id])
+        end
+
+        def is_user_post
+            unless current_user == @post.user
+              flash[:alert] = "That post doesn't belong to you!"
+              redirect_to root_path
+            end
         end
 end

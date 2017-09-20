@@ -1,4 +1,6 @@
 class Post < ApplicationRecord
+    belongs_to :user
+    validates :user_id, presence: true
     validates :image, presence: { message: 'Warning: no image was added!' }
     validates :caption, presence: { message: 'Warning: caption cannot be blank!' }
     validates :location, presence: { message: 'Warning: location cannot be blank!' }
