@@ -6,7 +6,7 @@
         <% @posts.each do |p| %>
         <div class="show-width">
             <div class="posts">
-                <div class="d-flex justify-content-between post-header">
+                <div class="d-flex justify-content-between post-header" style="background-color:<%= p.user.user_color %>">
                     <div class="username my-auto"><%= p.user.user_name %></div>
                     <div class="tiny-font my-auto">Posted <%= time_ago_in_words(p.created_at) %> ago.</div>
                 </div>
