@@ -7,6 +7,7 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'ruby', '~> 2.3.3'
 gem 'rails', '~> 5.0.1'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
@@ -33,6 +34,7 @@ gem 'simple_form'
 gem 'bootstrap', '=4.0.0.alpha6'
 gem 'sprockets-rails'
 gem "paperclip", "~> 5.0.0"
+gem 'aws-sdk', '~> 2.3'
 gem 'devise'
 gem 'popper_js', '~> 1.12.3'
 gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'

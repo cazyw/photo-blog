@@ -106,3 +106,8 @@ rails g model Post caption:string location:string blog:text
 rake db:migrate
 rails g paperclip post image
  
+$ git push heroku
+$ heroku pg:reset DATABASE
+$ heroku run rails db:migrate
+$ heroku run rails db:seed
+$ heroku restart
