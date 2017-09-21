@@ -70,7 +70,7 @@ user1.posts.create!(image: img,
     blog: "A tiny little place that packs a punch. Discovered this beauty just wandering around on my first afternoon. It's vegetarian (vegan options available) and they have a huge range of different salads, cooked/roasted vegies and grains. You pick your box size and then choose what you want. I had a little bit of as much as could fit in the box. It was great having a healthier option after all the fried fish and chips",
     created_at: Time.zone.now - 20.minutes)
 
-img = File.open(File.join(Rails.root, 'app/assets/images/IMG_20170523_124156915.JPG'))
+img = File.open(File.join(Rails.root, 'app/assets/images/IMG_20170523_124156915.jpg'))
                 
 user4.posts.create!(image: img,
     caption: "Yummo, burger time!",
@@ -118,7 +118,7 @@ user2.posts.create!(image: img,
     blog: "This was a beautiful little town next to a lake and surrounded by fields. There were sheep roaming these fields and we could get quite close to them. A whole herd of lambs were also nearby bounding back and forth!",
     created_at: Time.zone.now - 10.minutes)
 
-img = File.open(File.join(Rails.root, 'app/assets/images/IMG_20170805_124456580.JPG'))
+img = File.open(File.join(Rails.root, 'app/assets/images/IMG_20170805_124456580.jpg'))
 
 user2.posts.create!(image: img,
     caption: "Brunch",
