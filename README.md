@@ -5,6 +5,9 @@ Photo blog to keep track of interesting photos
 ## Environment
 
 Built and tested in Windows 10 Home 
+Currently there's an issue with it running in Firefox (55.0.3) - cannot login/register. 
+However it appears to work in Chrome (60.0.3112.113)
+Not yet responsive for mobile environments.
 
 ## System Dependencies & Configuration
 
@@ -94,18 +97,15 @@ Added gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require
 ```
 
 Make sure the bcrypt version is just bcrypt (3.1.11)
-Creation
 
-rails g controller posts
-rails g model Post caption:string location:string blog:text
-rake db:migrate
-rails g paperclip post image
- 
 
- bundle exec rake assets:precompile
+Issues with Heroku
+```
+bundle exec rake assets:precompile
 
 $ git push heroku
 $ heroku pg:reset DATABASE
 $ heroku run rails db:migrate
 $ heroku run rails db:seed
 $ heroku restart
+```
