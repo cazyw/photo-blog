@@ -1,10 +1,11 @@
 # Photo Blog
 
-Photo blog to keep track of interesting photos
+Photo blog to keep track of interesting photos. 
 
 ## Environment
 
-Built and tested in Windows 10 Home 
+Built and tested in Windows 10 Home.
+ 
 Currently there's an issue with it running in Firefox (55.0.3) - cannot login/register. 
 However it appears to work in Chrome (60.0.3112.113)
 Not yet responsive for mobile environments.
