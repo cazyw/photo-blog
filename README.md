@@ -1,6 +1,7 @@
 # Photo Blog
 
 A photo blog to keep track of interesting photos and experiences. 
+My current project, this is a work in progress. 
 
 <img src="https://cazyw.github.io/img/rails-photoblog.jpg" width="450">
 
