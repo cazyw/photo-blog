@@ -10,14 +10,14 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require tether
+//= require jquery3
 //= require jquery_ujs
-//= require jquery.minicolors
-//= require jquery.minicolors.simple_form
 //= require popper
+//= require tether
 //= require bootstrap
 //= require turbolinks
+//= require jquery.minicolors
+//= require jquery.minicolors.simple_form
 //= require_tree .
 
 
