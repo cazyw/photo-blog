@@ -14,17 +14,12 @@ Built and tested in Windows 10 Home
 Downloaded via the RailsInstaller [http://railsinstaller.org/en]. This includes DevKit which is necessary for a Windows environment (e.g. for paperclip gem)
 
 ## Application Installation Instructions
-* Configuration
 
-`bundle install`
-
-* Database creation
-
-* Database initialization
+A work in progress
 
 ## Operating Instructions
 
-* Deployment instructions
+A work in progress
 
 ## Testing Instructions
 
