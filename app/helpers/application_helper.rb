@@ -8,4 +8,11 @@ module ApplicationHelper
     }[flash_type.to_sym] || flash_type.to_s
   end
 
+
+    # Returns the current logged in user if any
+    def current_user?(user)
+        user == current_user
+    end
+
+
 end

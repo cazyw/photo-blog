@@ -110,6 +110,7 @@ In order to reset the table run
 $ rails db:drop:_unsafe
 $ rails db:create
 $ rails db:migrate
+$ rails db:reset db:seed
 ```
 
 ### Heroku
@@ -123,7 +124,7 @@ $ heroku run rails db:seed
 $ heroku restart
 ```
 
-To uncompile/precompile assets if required
+To uncompile/precompile assets if required (shouldn't be for rails 5)
 ```
 $RAILS_ENV=development rails assets:clobber
 $ bundle exec rails assets:precompile
