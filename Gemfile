@@ -29,16 +29,16 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 
-gem 'capybara'
-gem 'simple_form'
+gem 'capybara', '~>2.15.1'
+gem 'simple_form', '~>3.5.0'
 gem 'bootstrap', '=4.0.0.alpha6'
-gem 'sprockets-rails'
+gem 'sprockets-rails', '~>3.2.0'
 gem "paperclip", "~> 5.0.0"
 gem 'aws-sdk', '~> 2.3'
-gem 'devise'
+gem 'devise', '~>4.3.0'
 gem 'popper_js', '~> 1.12.3'
-gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
-gem 'jquery-minicolors-rails'
+gem 'bcrypt', '~>3.1.11', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
+gem 'jquery-minicolors-rails', '~>2.2.3.1'
 
 
 gem 'rails-assets-tether', '>= 1.1.0'
@@ -55,7 +55,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   gem 'rspec-rails', '~> 3.6'
-  gem 'factory_girl_rails'
+  gem 'factory_girl_rails', '~>4.8.0'
   gem 'sqlite3', '1.3.13'
 end
 

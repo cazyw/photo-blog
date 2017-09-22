@@ -12,7 +12,7 @@
     </div>
     <% if user_signed_in? %>
         <div class="row justify-content-md-center">
-            <button class='btn btn-info'><%= link_to "Edit Post", edit_post_path(@post) %></button>
+            <%= link_to "Edit Post", edit_post_path(@post), class:'btn btn-info' %>
         </div>
     <% end %>
 </div>

@@ -13,12 +13,12 @@
                 <%= link_to 'New Post', new_post_path, class: 'nav-item nav-link active' %>>
             </div>
             <form class="form-inline my-2 my-lg-0">
-                <button class="btn btn-outline-warning my-2 my-sm-0" type="button"><%= link_to 'Logout', destroy_user_session_path, method: :delete %></button>
+                <<%= link_to 'Logout', destroy_user_session_path, method: :delete, class:'btn btn-outline-warning my-2 my-sm-0' %>
             </form>
         <% else %>
             <form class="form-inline my-2 my-lg-0">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="button"><%= link_to 'Login', new_user_session_path %></button>
-                <button class="btn btn-outline-primary my-2 my-sm-0" type="button"><%= link_to 'Register', new_user_registration_path %></button>
+                <%= link_to 'Login', new_user_session_path, class:'btn btn-outline-success my-2 my-sm-0' %>
+                <%= link_to 'Register', new_user_registration_path, class:'btn btn-outline-primary my-2 my-sm-0' %>
             </form>
         <% end %>
     </div>

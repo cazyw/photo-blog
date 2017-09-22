@@ -10,7 +10,7 @@
             <%= f.input :location, input_html: { maxlength: 50 }, placeholder: 'Sydney' %>
             <%= f.input :blog, placeholder: 'Tell me about it' %>
             <div class="row justify-content-md-center">
-                <%= f.button :submit, class: 'btn-success' %><span class="white">.....</span><button class='btn btn-warning'><%= link_to 'Cancel', root_path %></button>
+                <%= f.button :submit, class: 'btn-success' %><span class="white">.....</span><%= link_to 'Cancel', root_path , class:'btn btn-warning' %>
             </div>
         <% end %>
         

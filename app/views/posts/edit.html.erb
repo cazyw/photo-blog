@@ -13,9 +13,9 @@
             <%= f.button :submit, class: 'btn btn-success' %>
             <div class="row justify-content-md-center">
                 <span class="white">.....</span>
-                <button class='btn btn-warning'><%= link_to 'Cancel', posts_path %></button>
+                <%= link_to 'Cancel', posts_path, class='btn btn-warning' %>
                 <span class="white">.....</span>
-                <button class='btn btn-danger'><%= link_to 'Delete Post', post_path(@post), method: :delete, data: {confirm: "Are you sure you want to delete this post?" } %></button>
+                <%= link_to 'Delete Post', post_path(@post), method: :delete, data: {confirm: "Are you sure you want to delete this post?" }, class:'btn btn-danger' %>
             </div>
         <% end %>
         

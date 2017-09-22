@@ -36,6 +36,8 @@ Users can
 Users who are logged in can also
 * edit and delete anyone's entries (future feature will restrict this to only the user's posts)
 
+The app is currently populated with seed users and blog entries. You can create your own account or to use an existing one (username: `ab@gmail.com` password:`foobar`)
+
 
 ## Overview
 
@@ -51,7 +53,7 @@ The fields for each post include
 
 
 
-## Discussion
+## Discussion and Lessons Learnt
 
 Below is a discussion around any challenges I exerienced in building this rails app (and a reminder to myself about steps that needed to be taken).
 
@@ -93,13 +95,33 @@ gem install bcrypt --platform=ruby
 Added gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt' and bundle install
 ```
 
+I encountered problems with dropping/resetting the database table which threw the following error
+```
+Couldn't drop database 'db/development.sqlite3'
+rails aborted!
+Errno::EACCES: Permission denied @ unlink_internal - ................./development.sqlite3
+bin/rails:4:in `require'
+bin/rails:4:in `<main>'
+Tasks: TOP => db:drop:_unsafe
+(See full trace by running task with --trace)
+```
+
+In order to reset the table I ended up doing
+```
+rails db:drop:_unsafe
+rails db:create
+rails db:migrate
+```
+
 Heroku steps
 
 ```
-$ bundle exec rake assets:precompile
+$ bundle exec rails assets:precompile
 $ git push heroku
 $ heroku pg:reset DATABASE
 $ heroku run rails db:migrate
 $ heroku run rails db:seed
 $ heroku restart
 ```
+
+I also ran into issues having `link_to` inside buttons. Resolved by adding `class='btn btn-<whatever>'` to the `link_to`
