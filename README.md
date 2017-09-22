@@ -1,18 +1,13 @@
 # Photo Blog
 
 A photo blog to keep track of interesting photos and experiences. 
-My current project, this is a work in progress. 
+My current project, additional features will be added as I explore Ruby on Rails. 
 
 <img src="https://cazyw.github.io/img/rails-photoblog.jpg" width="450">
 
 ## Environment
 
 Built and tested in Windows 10 Home.
-
-**Currently there's an issue with it running in Firefox** (55.0.3) - the buttons are not being picked up. There appears to be a problem with devise/jquery that needs to be investigated.
-
-However it appears to work in Google Chrome (60.0.3112.113).
-
 Not yet responsive for mobile environments.
 
 ## System Dependencies & Configuration
@@ -30,7 +25,7 @@ The Blog is at https://immense-dusk-24475.herokuapp.com
 
 Users can 
 * view entries by everyone
-* register for their own account
+* register for their own account (and pick a colour for their post header)
 * log in
 
 Users who are logged in can also
@@ -41,7 +36,7 @@ The app is currently populated with seed users and blog entries. You can create 
 
 ## Overview
 
-The idea of this photo blog was to build something using Ruby on Rails that I would continue to use and improve upon. At it's most basic, it's a platform for me to share photos and thoughts. But I'll be considering features in Rails I can add over time as practice such as the ability to comment, like, view a calendar or perhaps group by tags.
+The idea of this photo blog was to build something using Ruby on Rails that I would continue to use and improve upon. At it's most basic, it's a platform for me to share photos and thoughts. But I'll be adding features  over time as I explore the features in Rails.
 
 Currently users can pick a color to differentiate themselves from other users.
 
@@ -55,20 +50,24 @@ The fields for each post include
 
 ## Discussion and Lessons Learnt
 
-Below is a discussion around any challenges I exerienced in building this rails app (and a reminder to myself about steps that needed to be taken).
+Below is a reflection around any challenges I exerienced in building this rails app (and a reminder to myself about steps that needed to be taken).
 
-There is currently an issue with running the blog in **Firefox** (cannot use the buttons to login or register). 
-
-Gems that had to be added:
+### Gemfile
+Gems added:
 * rspec-rails (`gem 'rspec-rails', '~> 3.6'`) - for test driven development [https://github.com/rspec/rspec-rails]
-* capybara (`gem 'capybara'`)- for testing web applications by simulating user input [https://github.com/teamcapybara/capybara]
-* factory_girl_rails (`gem install factory_girl_rails`) - for creating test data [https://github.com/thoughtbot/factory_girl_rails]
-* simple_form (`gem 'simple_form'`) - for simple form creation [https://github.com/plataformatec/simple_form]
-* bootstrap (`gem 'bootstrap', '~> 4.0.0.beta'`) - bootstrap [https://github.com/twbs/bootstrap-rubygem]
-* paperclip (`gem "paperclip", "~> 5.0.0"`) - file attachment management [https://github.com/thoughtbot/paperclip]
-* ImageMagick - required for paperclip 
-* Devise (`gem 'devise'`) - for user authentication
-* Color picker (`gem 'jquery-minicolors-rails') - user color selection [https://github.com/kostia/jquery-minicolors-rails]
+* capybara (`gem 'capybara', '~>2.15.1'`)- for testing web applications by simulating user input [https://github.com/teamcapybara/capybara]
+* factory_girl_rails (`'factory_girl_rails', '~>4.8.0'`) - for creating test data [https://github.com/thoughtbot/factory_girl_rails]
+* simple_form (`'simple_form', '~>3.5.0'`) - for simple form creation [https://github.com/plataformatec/simple_form]
+* Devise (`gem 'devise', '~>4.3.0'`) - for user authentication [https://github.com/plataformatec/devise]
+* bootstrap-rails (`gem 'bootstrap', '=4.0.0.alpha6'`) - bootstrap v4 [https://github.com/twbs/bootstrap-rubygem]
+* sprocket-rails (`gem 'sprockets-rails', '~>3.2.0'`) - installed for bootstrap
+* popper (`gem 'popper_js', '~> 1.12.3'`) - installed for bootstrap
+* rails-assets-tether (`gem 'rails-assets-tether', '>= 1.1.0'`) - installed for bootstrap
+* paperclip (`gem "paperclip", "~> 5.0.0"`) - file attachment management [https://github.com/thoughtbot/paperclip] 
+* awk-sdk (`gem 'aws-sdk', '~> 2.3'`) - required to use AWS S3 to store files in production
+* Color picker (`gem 'jquery-minicolors-rails'`) - user color selection [https://github.com/kostia/jquery-minicolors-rails]
+
+* ImageMagick - required for paperclip [https://www.imagemagick.org/script/download.php]
 
 bundle initially was not working when running in the Visual Studio Code terminal (it was working using git bash). The problem was that the path could not be located. Following a suggestion on the web, I replaced the code in C:\RailsInstaller\Ruby2.3.0\bin\bundle.bat to
 
@@ -81,8 +80,7 @@ GOTO :EOF
 @"%~dp0ruby.exe" "%~dpn0" %*
 ```
 
-
-I ran into issues with bcrypt as well (which is used by devise) as devise installed
+I also ran into issues with bcrypt which wouldn't load (it is used by devise). This was due to the version of bcrypt that was installed. Devise installed
 ```
 $gem list bcrypt
 bcrypt (3.1.11 x86-mingw32)
@@ -94,8 +92,9 @@ gem uninstall devise && gem uninstall bcrypt
 gem install bcrypt --platform=ruby
 Added gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt' and bundle install
 ```
+### Database
 
-I encountered problems with dropping/resetting the database table which threw the following error
+I encountered problems with dropping/resetting the development database table which threw the following error
 ```
 Couldn't drop database 'db/development.sqlite3'
 rails aborted!
@@ -106,22 +105,30 @@ Tasks: TOP => db:drop:_unsafe
 (See full trace by running task with --trace)
 ```
 
-In order to reset the table I ended up doing
+In order to reset the table run
 ```
-rails db:drop:_unsafe
-rails db:create
-rails db:migrate
+$ rails db:drop:_unsafe
+$ rails db:create
+$ rails db:migrate
 ```
 
-Heroku steps
+### Heroku
 
+some commands for pushing to production on Heroku
 ```
-$ bundle exec rails assets:precompile
-$ git push heroku
+$ git push heroku master
 $ heroku pg:reset DATABASE
 $ heroku run rails db:migrate
 $ heroku run rails db:seed
 $ heroku restart
 ```
 
-I also ran into issues having `link_to` inside buttons. Resolved by adding `class='btn btn-<whatever>'` to the `link_to`
+To uncompile/precompile assets if required
+```
+$RAILS_ENV=development rails assets:clobber
+$ bundle exec rails assets:precompile
+```
+
+### Random
+
+I ran into a peculiar issue where buttons stopped working in Firefox but **did** work in Chrome and IE. Links were fine, just not when they were in buttons. I finally tracked the problem down to using `link_to` inside `<button>`. Resolved by adding `class='btn btn-<whatever>'` to the `link_to` instead. This was odd because buttons had been working but I believe changing the order in `application.js` may have caused this issue whilst fixing other issues. The order of the entries in `application.js` is important. 
