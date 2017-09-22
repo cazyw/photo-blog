@@ -13,11 +13,12 @@
     <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
     <%= f.input :password_confirmation, required: true %>
     <%= f.input :user_color, as: :minicolors, input_html: {data: {
-          minicolors: {theme: :bootstrap, position: :right}}} %>
+          minicolors: {theme: :bootstrap, defaultValue: "#ffbb33", position: :right}}} %>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+  <div class="row justify-content-md-center">
+    <div class="form-actions">
+      <%= f.button :submit, "Sign up", class: "btn btn-success" %>
+    </div>
   </div>
 <% end %>
 

@@ -1,6 +1,14 @@
 require 'rails_helper.rb'
 
 feature 'Creating posts' do
+    background '' do
+        user = create(:user)
+        visit '/'
+        click_link 'Login'
+        fill_in 'Email', with: 'xo@gmail.com'
+        fill_in 'Password', with: 'foobar'
+        click_button 'Log in'
+    end
     scenario 'can create a post' do
         visit '/'
         click_link 'New Post'

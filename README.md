@@ -29,9 +29,36 @@ Users can
 * log in
 
 Users who are logged in can also
-* edit and delete anyone's entries (future feature will restrict this to only the user's posts)
+* edit and delete their own blog posts
 
 The app is currently populated with seed users and blog entries. You can create your own account or to use an existing one (username: `ab@gmail.com` password:`foobar`)
+
+## Testing Instructions
+
+* Using Rspec [https://github.com/rspec/rspec-rails]
+
+### Instructions from the Rspec README
+To run the specs:
+```
+bundle exec rspec
+```
+or
+```
+rspec
+```
+To run only a subset of these specs use the following command:
+```
+# Run only model specs
+bundle exec rspec spec/models
+
+# Run only specs for AccountsController
+bundle exec rspec spec/controllers/accounts_controller_spec.rb
+
+# Run only spec on line 8 of AccountsController
+bundle exec rspec spec/controllers/accounts_controller_spec.rb:8
+
+rspec /spec/features/creating_new_posts_spec.rb
+```
 
 
 ## Overview
