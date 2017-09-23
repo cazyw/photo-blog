@@ -2,12 +2,18 @@
 <div class="container-fluid">
     <div class="row justify-content-md-center">
         <div class="show-width">
-        <ul>
-            <li class="img"><%= image_tag(@post.image.url(:large)) %></li>
-            <li><%= @post.caption %></li>
-            <li><%= @post.location %></li>
-            <li><%= @post.blog %></li>
-        </ul>
+            <div class="posts">
+                <div class="d-flex justify-content-between post-header" style="background-color:<%= @post.user.user_color %>">
+                        <div class="username my-auto"><%= @post.user.user_name %></div>
+                        <div class="tiny-font my-auto">Posted <%= time_ago_in_words(@post.created_at) %> ago.</div>
+                </div>
+                <ul>
+                    <li class="img"><%= image_tag(@post.image.url(:large)) %></li>
+                    <li class="caption"><%= @post.caption %></li>
+                    <li>Location: <%= @post.location %></li>
+                    <li><%= @post.blog %></li>
+                </ul>
+            </div>
         </div>
     </div>
     <div class="row justify-content-md-center">

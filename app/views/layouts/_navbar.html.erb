@@ -3,17 +3,19 @@
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
+    
     <%= link_to 'Photo Blog', root_path, class: 'navbar-brand' %>
     
-
     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
         <% if user_signed_in? %>
+            <div class="navbar-nav my-auto mx-auto" style="color:<%= current_user.user_color %>">  
+                <%= link_to current_user.user_name, user_posts_path(current_user.id), class: 'nav-item nav-link active', style:"color: #{current_user.user_color}" %>
+            </div>
             <div class="navbar-nav my-auto">
-                <%= link_to 'New Post', new_post_path, class: 'nav-item nav-link active' %>>
+                <%= link_to 'New Post', new_post_path, class: 'nav-item nav-link active' %>
             </div>
             <form class="form-inline my-2 my-lg-0">
-                <<%= link_to 'Logout', destroy_user_session_path, method: :delete, class:'btn btn-outline-warning my-2 my-sm-0' %>
+                <%= link_to 'Logout', destroy_user_session_path, method: :delete, class:'btn btn-outline-warning my-2 my-sm-0' %>
             </form>
         <% else %>
             <form class="form-inline my-2 my-lg-0">

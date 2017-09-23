@@ -21,7 +21,7 @@ class PostsController < ApplicationController
             flash[:success] = "Image blog post created"
             redirect_to posts_path
         else
-            flash[:alert] = "Warning: required fields not completed!"
+            flash[:error] = "Warning: required fields not completed!"
             render :new
         end
 
@@ -36,7 +36,7 @@ class PostsController < ApplicationController
             flash[:success] = "Blog post updated!"
             redirect_to post_path
         else
-            flash[:alert] = "Warning: something's gone teribly wrong and it didn't update!"
+            flash[:error] = "Warning: something's gone teribly wrong and it didn't update!"
             render :edit
         end
     end
@@ -46,14 +46,14 @@ class PostsController < ApplicationController
             flash[:success] = "Post deleted!"
             redirect_to posts_path
         else
-            flash[:alert] = "Warning: the post wasn't deleted!"
+            flash[:error] = "Warning: the post wasn't deleted!"
         end
     end
 
     private
     
         def post_params
-            params.require(:post).permit(:image, :caption, :location, :blog)
+            params.require(:post).permit(:image, :caption, :location, :blog, :user_id)
         end
 
         def set_post

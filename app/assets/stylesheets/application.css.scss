@@ -81,6 +81,11 @@ a:link, a:visited, a:hover, a:active {
     border: 1px solid $gray-medium-light;
 }
 
+.posts ul {
+    padding: 0;
+    margin: 0;
+}
+
 .top-post {
     height: 320px;
     margin: auto;
@@ -152,4 +157,8 @@ a:link, a:visited, a:hover, a:active {
 
 .index-img {
     float: left;
+}
+
+.caption {
+    font-weight: 700;
 }
