@@ -11,7 +11,7 @@
                     <li class="img"><%= image_tag(@post.image.url(:large)) %></li>
                     <li class="caption"><%= @post.caption %></li>
                     <li>Location: <%= @post.location %></li>
-                    <li><%= @post.blog %></li>
+                    <li><%= simple_format(@post.blog) %></li>
                 </ul>
             </div>
         </div>
