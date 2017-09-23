@@ -3,6 +3,8 @@
 A photo blog to keep track of interesting photos and experiences. 
 My current project, additional features will be added as I explore Ruby on Rails. 
 
+https://foodforthesoul-blog.herokuapp.com/
+
 <img src="https://cazyw.github.io/img/rails-photoblog.jpg" width="450">
 
 ## Environment
@@ -21,7 +23,7 @@ Downloaded via the RailsInstaller [http://railsinstaller.org/en]. This includes 
 
 ## Operating Instructions
 
-The Blog is at https://immense-dusk-24475.herokuapp.com
+The Blog is at https://foodforthesoul-blog.herokuapp.com/
 
 Users can 
 * view entries by everyone
