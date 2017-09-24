@@ -20,9 +20,16 @@ $background-g: #6A7B86;
 $background-o: #E66000;
 $background-dg: #424F5A;
 
+html {
+    height: 100%;
+}
+
 body {
     background-color: $background-dg;
     font-family: 'Montserrat', sans-serif;
+    min-height: 100%;
+    position: relative;
+    padding-bottom: 70px;
 }
 
 h1 {
@@ -56,15 +63,28 @@ img {
     margin: 10px auto;
 }
 
+footer {
+    background: rgb(106, 123, 134);
+    background: rgba(106, 123, 134, 0.5);
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+
 footer.footer ul {
     text-align: center;
-    background-color: $background-dg;
+    background-color: transparent;
     border-style: none;
+    width: 150px;
+    margin: 0 auto;
 }
 
 a:link, a:visited, a:hover, a:active {
     color: #FFF;
 }
+
+
+
 
 .navbar-brand {
     font-family: 'Walter Turncoat', cursive;
