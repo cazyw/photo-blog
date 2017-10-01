@@ -49,7 +49,7 @@ img = File.open(File.join(Rails.root, 'app/assets/images/IMG_20170901_134127317_
 user2.posts.create!(image: img,
     caption: "Bikes!",
     location: "Random places in Sydney",
-    blog: "These bikes randomly started appearing at Prince Alfred Park in the city one day and it turns out they are from two separate bike hire startups. The bikes can be hired through an app which tracks the location of each bike. The great thing is that bikes don't have to be returned to a bike docker, they can just be left where they are (in a reasonable location). More and more of them have started appearing, usually around the public pool area.\n Should be interesting to see how it goes as overseas experience has shown bikes being stuck up trees and dumped on the street. Admittedly not sure if those bikes were left there for real or for instagram stardom.",
+    blog: "These bikes randomly started appearing at Prince Alfred Park in the city one day and it turns out they are from two separate bike hire startups. The bikes can be hired through an app which tracks the location of each bike. The great thing is that bikes don't have to be returned to a bike docker, they can just be left where they are (in a reasonable location). More and more of them have started appearing, usually around the public pool area.\n \n Should be interesting to see how it goes as overseas experience has shown bikes being stuck up trees and dumped on the street. Admittedly not sure if those bikes were left there for real or for instagram stardom.",
     created_at: Time.zone.now - 20.days)
 
 img = File.open(File.join(Rails.root, 'app/assets/images/IMG_4643.JPG'))
@@ -65,7 +65,7 @@ img = File.open(File.join(Rails.root, 'app/assets/images/IMG_6660.JPG'))
 user3.posts.create!(image: img,
     caption: "Picture perfect sunset",
     location: "Killarney, Ireland",
-    blog: "The prefect end to an otherwise cold, wet and windy day. This was the day we drove around the Ring of Kerry, taking in the south-west corner of Ireland and we would have loved to have had sunny weather. Unfortunately this was the one day the clouds blanketed the sky and sank down so low we could barely see infront of us as we headed up through the mountains. Driving through the fog in the desolate mountain area made for an especially eerie drive, like something in a ghost movie where you half expect something to pop out through the fog.\n But just as we were heading back into town at the end of the day, the clouds parted and we managed to make it down to the lake to snap a golden sunset. Beautiful and tranquil.",
+    blog: "The prefect end to an otherwise cold, wet and windy day. This was the day we drove around the Ring of Kerry, taking in the south-west corner of Ireland and we would have loved to have had sunny weather. Unfortunately this was the one day the clouds blanketed the sky and sank down so low we could barely see infront of us as we headed up through the mountains. Driving through the fog in the desolate mountain area made for an especially eerie drive, like something in a ghost movie where you half expect something to pop out through the fog.\n \n But just as we were heading back into town at the end of the day, the clouds parted and we managed to make it down to the lake to snap a golden sunset. Beautiful and tranquil.",
     created_at: Time.zone.now - 15.days)
 
 img = File.open(File.join(Rails.root, 'app/assets/images/IMG_4412.JPG'))

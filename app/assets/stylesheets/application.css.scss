@@ -211,7 +211,7 @@ button {
         // height: 200px;
     }
 
-    li img {
+    .github {
         max-height: 32px;
         max-width: 32px;
     }
@@ -240,8 +240,13 @@ button {
         margin-top: 15px;
     }
 
-    li img {
+    .github {
         max-height: 32px;
         max-width: 32px;
+    }
+
+    .blurb {
+        padding: 5px 10px;
+        font-size: 0.8em;
     }
 }

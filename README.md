@@ -139,7 +139,7 @@ In order to reset the table run
 $ rails db:drop:_unsafe
 $ rails db:create
 $ rails db:migrate
-$ rails db:reset db:seed
+$ rails db:seed
 ```
 
 ### Heroku
