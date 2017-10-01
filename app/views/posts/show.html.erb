@@ -1,6 +1,6 @@
 <h1></h1>
 <div class="container-fluid">
-    <div class="row justify-content-md-center">
+    <div class="row justify-content-center">
         <div class="show-width">
             <div class="posts">
                 <div class="d-flex justify-content-between post-header" style="background-color:<%= @post.user.user_color %>">
@@ -16,7 +16,7 @@
             </div>
         </div>
     </div>
-    <div class="row justify-content-md-center">
+    <div class="row justify-content-center">
         <% if current_user?(@post.user) %>
             <%= link_to "Edit Post", edit_post_path(@post), class:'btn btn-info' %>
             <span class="black">.....</span>

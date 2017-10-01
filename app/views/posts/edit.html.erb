@@ -1,6 +1,6 @@
 <h1>Edit Blog Post</h1>
 <div class="container-fluid">
-    <div class="row justify-content-md-center">
+    <div class="row justify-content-center">
      <div class="col-md-8 edit-post">
         <div class="img">
             <%= image_tag(@post.image.url(:medium)) %>
@@ -10,7 +10,7 @@
             <%= f.input :caption, input_html: { maxlength: 70 } %>
             <%= f.input :location, input_html: { maxlength: 50 }%>
             <%= f.input :blog %>
-            <div class="row justify-content-md-center">
+            <div class="row justify-content-center">
                 <%= f.button :submit, class: 'btn btn-success' %>
                 <span class="white">.....</span>
                 <%= link_to 'Cancel', :back, class:'btn btn-warning' %>
