@@ -7,10 +7,11 @@ https://foodforthesoul-blog.herokuapp.com/
 
 <img src="https://cazyw.github.io/img/rails-photoblog.jpg" width="450">
 
+**Updated** - now responsive for small screens/mobiles
+
 ## Environment
 
 Built and tested in Windows 10 Home.
-Not yet responsive for mobile environments.
 
 ## System Dependencies & Configuration
 
