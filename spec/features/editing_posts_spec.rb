@@ -10,7 +10,7 @@ feature 'Editing posts' do
         click_button 'Log in'
         post = create(:post)
         visit '/'
-        find(:xpath, "//a[contains(@href,'posts/1')]").click
+        first(:xpath, "//a[contains(@href,'posts/1')]").click
         click_link 'Edit Post'
     end
     scenario 'can edit a post' do
