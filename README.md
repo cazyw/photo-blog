@@ -92,6 +92,12 @@ Below is a reflection around the setup and any challenges I exerienced in buildi
 Some of the problems and solutions are still rather obscure and I plan to do further research into why errors occur and why those solutions work.
 
 ### Gemfile
+
+update excluding the production gems
+```
+$ bundle install --without production 
+```
+
 Gems added:
 * rspec-rails (`gem 'rspec-rails', '~> 3.6'`) - for test driven development [https://github.com/rspec/rspec-rails]
 * capybara (`gem 'capybara', '~>2.15.1'`)- for testing web applications by simulating user input [https://github.com/teamcapybara/capybara]

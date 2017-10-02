@@ -50,6 +50,11 @@ ul {
       padding: 5px 0;
     }
 
+    li.img {
+        overflow: auto;
+        padding: 15px 0;
+      }
+
     border: 1px solid $gray-medium-light;
 }
 
@@ -227,6 +232,7 @@ button {
     img {
         width: 80%;
         margin: auto auto;
+        padding: 10px 0px;
     }
     .posts {
         margin: 5px;
