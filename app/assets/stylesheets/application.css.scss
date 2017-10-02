@@ -83,6 +83,11 @@ a:link, a:visited, a:hover, a:active {
     color: #FFF;
 }
 
+.blog > a {
+    color: #000;
+    text-decoration: none;
+}
+
 button {
     cursor: pointer;
 }

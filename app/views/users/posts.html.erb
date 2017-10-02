@@ -15,7 +15,7 @@
                     <div class="index-titles">
                         <p class="caption"><%= p.caption %></p> 
                         <p>Location: <%= p.location %></p>
-                        <p><%= truncate p.blog, length: 160 %></p>
+                        <p class="blog"><%= link_to((truncate p.blog, length: 160), post_path(p)) %></p>
                     </div>
                 </div>
                 
