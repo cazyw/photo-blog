@@ -4,7 +4,7 @@ class UsersController < ApplicationController
     # before_action :is_current_user?, only: [:show]
 
     def index
-        @users = User.all
+        @users = User.order("user_name ASC").all
     end
 
     def show
