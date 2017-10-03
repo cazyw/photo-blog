@@ -40,7 +40,7 @@ gem 'popper_js', '~> 1.12.3'
 gem 'bcrypt', '~>3.1.11', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
 gem 'jquery-minicolors-rails', '~>2.2.3.1'
 
-
+gem 'rails-controller-testing'
 gem 'rails-assets-tether', '>= 1.1.0'
 
 # Use Redis adapter to run Action Cable in production
@@ -57,6 +57,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.6'
   gem 'factory_girl_rails', '~>4.8.0'
   gem 'sqlite3', '1.3.13'
+  gem 'pry-rails'
 end
 
 group :development do

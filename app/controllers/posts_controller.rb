@@ -1,14 +1,19 @@
+
 class PostsController < ApplicationController
     before_action :authenticate_user!, :except => [:show, :index]
     before_action :set_post, only: [:show, :edit, :update, :destroy]
     before_action :is_user_post, only: [:edit, :update, :destroy]
+    require 'pry'
     
-
+    
     def index
-        @posts = Post.order("created_at DESC").all
+        @posts = Post.order(created_at: :desc).all
     end
 
     def show
+        if @post.nil?
+            redirect_to posts_path
+        end
     end
 
     def new
@@ -57,7 +62,8 @@ class PostsController < ApplicationController
         end
 
         def set_post
-            @post = Post.find(params[:id])
+            @post = Post.find_by(id: params[:id])
+            
         end
 
         def is_user_post
