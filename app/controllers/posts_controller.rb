@@ -3,8 +3,6 @@ class PostsController < ApplicationController
     before_action :authenticate_user!, :except => [:show, :index]
     before_action :set_post, only: [:show, :edit, :update, :destroy]
     before_action :is_user_post, only: [:edit, :update, :destroy]
-    require 'pry'
-    
     
     def index
         @posts = Post.order(created_at: :desc).all
