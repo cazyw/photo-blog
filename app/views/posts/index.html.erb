@@ -10,7 +10,7 @@
                     <div class="username my-auto"><%= p.user.user_name %></div>
                     <div class="tiny-font my-auto">Posted <%= time_ago_in_words(p.created_at) %> ago.</div>
                 </div>
-                <div class="top-post">
+                <div class="post-body">
                     <div class="index-img"><%= link_to(image_tag(p.image.url(:medium)), post_path(p)) %></div>
                     <div class="index-titles">
                         <p class="caption"><%= p.caption %></p> 
