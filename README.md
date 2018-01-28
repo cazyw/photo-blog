@@ -11,12 +11,12 @@ https://foodforthesoul-blog.herokuapp.com/
 
 ## Environment
 
-Built and tested in Windows 10 Home. 
+Originally built and tested in Windows 10 Home. Currently it's being transferred to development on a Mac, so some of the files and settings have been changed to run on OSX rather than Windows.
 
 ## System Dependencies & Configuration
 
 Built with
-* Ruby version: 2.3.3p222
+* Ruby version: 2.3.3
 * Rails version: 5.0.6
 
 Downloaded via the RailsInstaller [http://railsinstaller.org/en]. This includes DevKit which is necessary for a Windows environment (e.g. for paperclip gem)
