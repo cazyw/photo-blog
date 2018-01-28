@@ -95,7 +95,6 @@ config.paperclip_defaults = {
     s3_region: ENV.fetch('AWS_REGION'),
   }, 
   :url =>':s3_domain_url',
-  :s3_protocol => 'https',
   :path => '/:class/:attachment/:id_partition/:style/:filename'
 }
 

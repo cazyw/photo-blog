@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.5.0'
+ruby '2.3.3'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -8,7 +8,7 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.4'
+gem 'rails', '~> 5.0.1'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
 # Use Puma as the app server
@@ -33,7 +33,7 @@ gem 'capybara', '~>2.15.1'
 gem 'simple_form', '~>3.5.0'
 gem 'bootstrap', '=4.0.0.alpha6'
 gem 'sprockets-rails', '~>3.2.0'
-gem "paperclip", '~> 5.2.0'
+gem "paperclip", '~> 5.0.0'
 gem 'aws-sdk', '~> 2.3'
 gem 'devise', '~>4.3.0'
 gem 'popper_js', '~> 1.12.3'
