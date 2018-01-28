@@ -91,8 +91,6 @@ The fields for each post include
 
 ## Discussion and Lessons Learnt
 
-Note to self - review and update dependancies due to a vulnerability issue (23/01/2018)
-
 Below is a reflection around the setup and any challenges I exerienced in building this rails app, gemfiles added and nitty gritty frustrations and helpful resources.
 
 Some of the problems and solutions are still rather obscure and I plan to do further research into why errors occur and why those solutions work.
