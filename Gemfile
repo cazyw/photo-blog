@@ -37,7 +37,7 @@ gem "paperclip", '~> 5.2.0'
 gem 'aws-sdk', '~> 2.3'
 gem 'devise', '~>4.3.0'
 gem 'popper_js', '~> 1.12.3'
-gem 'bcrypt', '~>3.1.11', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
+# gem 'bcrypt', '~>3.1.11', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
 gem 'jquery-minicolors-rails', '~>2.2.3.1'
 
 gem 'rails-controller-testing'
