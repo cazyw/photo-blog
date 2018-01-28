@@ -95,7 +95,8 @@ config.paperclip_defaults = {
     s3_region: ENV.fetch('AWS_REGION'),
   }, 
   :url =>':s3_domain_url',
-  :path => '/:class/:attachment/:id_partition/:style/:filename'
+  :path => '/:class/:attachment/:id_partition/:style/:filename',
+  :s3_protocol => 'https'
 }
 
 # Disable serving static files from the `/public` folder by default since
