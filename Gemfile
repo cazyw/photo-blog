@@ -31,7 +31,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'capybara', '~>2.15.1'
 gem 'simple_form', '~>3.5.0'
-gem 'bootstrap', '=4.0.0.alpha6'
+gem 'bootstrap', '~>4.1.2'
 gem 'sprockets-rails', '~>3.2.0'
 gem "paperclip", '~> 5.2.0'
 gem 'aws-sdk', '~> 2.3'
