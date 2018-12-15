@@ -1,7 +1,7 @@
 # Photo Blog
 
-A photo blog to keep track of interesting photos and experiences. 
-This is my current project as a delve into learning Rails, so additional features will be added as I explore all the things I can do with Ruby on Rails. 
+A photo blog to keep track of interesting photos and experiences.
+This is my current project as a delve into learning Rails, so additional features will be added as I explore all the things I can do with Ruby on Rails.
 
 https://foodforthesoul-blog.herokuapp.com/
 
@@ -28,7 +28,7 @@ See the discussion section below for additional information about the creation o
 
 The Blog is on Heroku - [Food for the Soul](https://foodforthesoul-blog.herokuapp.com/)
 
-Users can 
+Users can
 * view entries by everyone
 * register for their own account (and pick a colour for their post header)
 * log in
@@ -46,6 +46,14 @@ Totally a work in progress as I am still learning how to do TDD and testing in g
 * Using [Rspec](https://github.com/rspec/rspec-rails)
 * Using [Capybara](https://github.com/teamcapybara/capybara)
 * Using [FactoryGirl](https://github.com/thoughtbot/factory_girl_rails)
+
+
+### Run server locally
+
+To run the server locally
+```
+rails s
+```
 
 
 ### Instructions from the Rspec README
@@ -95,7 +103,7 @@ Some of the problems and solutions are still rather obscure and I plan to do fur
 
 update excluding the production gems
 ```
-$ bundle install --without production 
+$ bundle install --without production
 ```
 
 Gems added:
@@ -108,7 +116,7 @@ Gems added:
 * sprocket-rails (`gem 'sprockets-rails', '~>3.2.0'`) - installed for bootstrap
 * popper (`gem 'popper_js', '~> 1.12.3'`) - installed for bootstrap
 * rails-assets-tether (`gem 'rails-assets-tether', '>= 1.1.0'`) - installed for bootstrap
-* paperclip (`gem "paperclip", "~> 5.0.0"`) - file attachment management [https://github.com/thoughtbot/paperclip] 
+* paperclip (`gem "paperclip", "~> 5.0.0"`) - file attachment management [https://github.com/thoughtbot/paperclip]
 * awk-sdk (`gem 'aws-sdk', '~> 2.3'`) - required to use AWS S3 to store files in production
 * color picker (`gem 'jquery-minicolors-rails'`) - user color selection [https://github.com/kostia/jquery-minicolors-rails]
 
@@ -183,4 +191,4 @@ A useful [cheatsheet/guide](https://gist.github.com/zhengjia/428105)
 
 ### Random
 
-I ran into a peculiar issue where buttons stopped working in Firefox but **did** work in Chrome and IE. Links were fine, just not when they were in buttons. I finally tracked the problem down to using `link_to` inside `<button>`. Resolved by adding `class='btn btn-<whatever>'` to the `link_to` instead. This was odd because buttons had been working but I believe changing the order in `application.js` may have caused this issue whilst fixing other issues. The order of the entries in `application.js` is important. 
+I ran into a peculiar issue where buttons stopped working in Firefox but **did** work in Chrome and IE. Links were fine, just not when they were in buttons. I finally tracked the problem down to using `link_to` inside `<button>`. Resolved by adding `class='btn btn-<whatever>'` to the `link_to` instead. This was odd because buttons had been working but I believe changing the order in `application.js` may have caused this issue whilst fixing other issues. The order of the entries in `application.js` is important.

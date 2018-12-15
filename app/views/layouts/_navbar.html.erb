@@ -1,14 +1,14 @@
-<nav class="navbar navbar-toggleable-sm navbar-inverse fixed-top bg-inverse">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-    
+
     <%= link_to 'Photo Blog', root_path, class: 'navbar-brand' %>
-    
+
     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
         <% if user_signed_in? %>
-            <div class="navbar-nav my-auto mx-auto" style="color:<%= current_user.user_color %>">  
+            <div class="navbar-nav my-auto mx-auto" style="color:<%= current_user.user_color %>">
                 <%= link_to current_user.user_name, user_posts_path(current_user.id), class: 'nav-item nav-link active', style:"color: #{current_user.user_color}" %>
             </div>
             <div class="navbar-nav my-auto">
@@ -25,3 +25,4 @@
         <% end %>
     </div>
 </nav>
+
