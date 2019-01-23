@@ -29,7 +29,7 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 
-gem 'capybara', '~>2.15.1'
+gem 'capybara', '~> 3.0.0'
 gem 'simple_form', '~>3.5.0'
 gem 'bootstrap', '~>4.1.2'
 gem 'sprockets-rails', '~>3.2.0'
