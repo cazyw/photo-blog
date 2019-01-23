@@ -18,6 +18,7 @@ Originally built and tested in Windows 10 Home. Currently it's being transferred
 Built with
 * Ruby version: 2.3.3
 * Rails version: 5.0.6
+* Bundler version: 2.0.1 (as Heroku is still using Bundler version 1.15.2, run this command before pushing up to heroku `heroku buildpacks:set https://github.com/bundler/heroku-buildpack-bundler2`)
 
 Downloaded via the RailsInstaller [http://railsinstaller.org/en]. This includes DevKit which is necessary for a Windows environment (e.g. for paperclip gem)
 
