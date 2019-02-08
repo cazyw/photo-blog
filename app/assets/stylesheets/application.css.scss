@@ -125,7 +125,8 @@ button {
     box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5),
                 0px 1px 2px 2px rgba(0,0,0,0.3),
                 0px 3px 3px 3px rgba(0,0,0,0.1);
-    transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.25s ease-in;
+    transition: transform 0.2s ease-in;
 }
 
 .posts:hover {
@@ -133,6 +134,7 @@ button {
                 0px 5px 5px 3px rgba(0,0,0,0.2),
                 0px 6px 7px 5px rgba(0,0,0,0.2),
                 0px 7px 8px 8px rgba(0,0,0,0.08);
+    transform: scale(1.01);
 }
 
 .posts ul {
