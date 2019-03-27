@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.3.3'
+ruby '2.5.0'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -35,7 +35,7 @@ gem 'bootstrap', '~> 4.3'
 gem 'sprockets-rails', '~>3.2.0'
 gem "paperclip", '~> 5.2.0'
 gem 'aws-sdk', '~> 2.3'
-gem 'devise', '~>4.3.0'
+gem 'devise', '~>4.6.0'
 gem 'popper_js', '~> 1.14.5'
 # gem 'bcrypt', '~>3.1.11', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
 gem 'jquery-minicolors-rails', '~>2.2.3.1'
