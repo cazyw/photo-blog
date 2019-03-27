@@ -16,27 +16,29 @@ Originally built and tested in Windows 10 Home. Currently it's being transferred
 ## System Dependencies & Configuration
 
 Built with
-* Ruby version: 2.3.3
-* Rails version: 5.0.6
-* Bundler version: 2.0.1 (as Heroku is still using Bundler version 1.15.2, run this command before pushing up to heroku `heroku buildpacks:set https://github.com/bundler/heroku-buildpack-bundler2`)
+
+- Ruby version: 2.5.0
+- Rails version: 5.0.7.2
+- Bundler version: 2.0.1 (as Heroku is still using Bundler version 1.15.2, run this command before pushing up to heroku `heroku buildpacks:set https://github.com/bundler/heroku-buildpack-bundler2`)
 
 Downloaded via the RailsInstaller [http://railsinstaller.org/en]. This includes DevKit which is necessary for a Windows environment (e.g. for paperclip gem)
 
 See the discussion section below for additional information about the creation of this app.
-
 
 ## Operating Instructions
 
 The Blog is on Heroku - [Food for the Soul](https://foodforthesoul-blog.herokuapp.com/)
 
 Users can
-* view entries by everyone
-* register for their own account (and pick a colour for their post header)
-* log in
+
+- view entries by everyone
+- register for their own account (and pick a colour for their post header)
+- log in
 
 Users who are logged in can also
-* view a list of their own blog posts
-* edit and delete their own blog posts
+
+- view a list of their own blog posts
+- edit and delete their own blog posts
 
 The app is currently populated with seed data (users and blog entries). You can create your own account or use an existing one (username: `ab@gmail.com` ; password: `foobar` - you can work out the usernames from this)
 
@@ -44,29 +46,34 @@ The app is currently populated with seed data (users and blog entries). You can 
 
 Totally a work in progress as I am still learning how to do TDD and testing in general
 
-* Using [Rspec](https://github.com/rspec/rspec-rails)
-* Using [Capybara](https://github.com/teamcapybara/capybara)
-* Using [FactoryGirl](https://github.com/thoughtbot/factory_girl_rails)
-
+- Using [Rspec](https://github.com/rspec/rspec-rails)
+- Using [Capybara](https://github.com/teamcapybara/capybara)
+- Using [FactoryGirl](https://github.com/thoughtbot/factory_girl_rails)
 
 ### Run server locally
 
 To run the server locally
+
 ```
 rails s
 ```
 
-
 ### Instructions from the Rspec README
+
 To run the specs:
+
 ```
 bundle exec rspec
 ```
+
 or
+
 ```
 rspec
 ```
+
 To run only a subset of these specs use the following command:
+
 ```
 # Run only feature specs (all specs are currently here)
 bundle exec rspec ./spec/features
@@ -79,7 +86,6 @@ bundle exec rspec ./spec/features/deleting_posts_spec.rb:16
 
 ```
 
-
 ## Overview
 
 The idea of this photo blog was to build something using Ruby on Rails that I would continue to use and improve upon. I wanted to learn how to use Rails so this project came about. At it's most basic, it's a platform for me to share photos and thoughts. But I'll be adding features over time as I explore all the different features in Rails.
@@ -87,12 +93,11 @@ The idea of this photo blog was to build something using Ruby on Rails that I wo
 Currently users can pick a color to differentiate themselves from other users.
 
 The fields for each post include
-* Image: the photo
-* Caption: a short description
-* Location: where the photo was taken
-* Blog: thoughts, discussions, opinions, ramblings
 
-
+- Image: the photo
+- Caption: a short description
+- Location: where the photo was taken
+- Blog: thoughts, discussions, opinions, ramblings
 
 ## Discussion and Lessons Learnt
 
@@ -103,25 +108,27 @@ Some of the problems and solutions are still rather obscure and I plan to do fur
 ### Gemfile
 
 update excluding the production gems
+
 ```
 $ bundle install --without production
 ```
 
 Gems added:
-* rspec-rails (`gem 'rspec-rails', '~> 3.6'`) - for test driven development [https://github.com/rspec/rspec-rails]
-* capybara (`gem 'capybara', '~>2.15.1'`)- for testing web applications by simulating user input [https://github.com/teamcapybara/capybara]
-* factory_girl_rails (`gem 'factory_girl_rails', '~>4.8.0'`) - for creating test data [https://github.com/thoughtbot/factory_girl_rails]
-* simple_form (`gem 'simple_form', '~>3.5.0'`) - for simple form creation [https://github.com/plataformatec/simple_form]
-* devise (`gem 'devise', '~>4.3.0'`) - for user authentication [https://github.com/plataformatec/devise]
-* bootstrap-rails (`gem 'bootstrap', '=4.0.0.alpha6'`) - bootstrap v4 [https://github.com/twbs/bootstrap-rubygem]
-* sprocket-rails (`gem 'sprockets-rails', '~>3.2.0'`) - installed for bootstrap
-* popper (`gem 'popper_js', '~> 1.12.3'`) - installed for bootstrap
-* rails-assets-tether (`gem 'rails-assets-tether', '>= 1.1.0'`) - installed for bootstrap
-* paperclip (`gem "paperclip", "~> 5.0.0"`) - file attachment management [https://github.com/thoughtbot/paperclip]
-* awk-sdk (`gem 'aws-sdk', '~> 2.3'`) - required to use AWS S3 to store files in production
-* color picker (`gem 'jquery-minicolors-rails'`) - user color selection [https://github.com/kostia/jquery-minicolors-rails]
 
-* ImageMagick - required for paperclip [https://www.imagemagick.org/script/download.php]
+- rspec-rails (`gem 'rspec-rails', '~> 3.6'`) - for test driven development [https://github.com/rspec/rspec-rails]
+- capybara (`gem 'capybara', '~>2.15.1'`)- for testing web applications by simulating user input [https://github.com/teamcapybara/capybara]
+- factory_girl_rails (`gem 'factory_girl_rails', '~>4.8.0'`) - for creating test data [https://github.com/thoughtbot/factory_girl_rails]
+- simple_form (`gem 'simple_form', '~>3.5.0'`) - for simple form creation [https://github.com/plataformatec/simple_form]
+- devise (`gem 'devise', '~>4.3.0'`) - for user authentication [https://github.com/plataformatec/devise]
+- bootstrap-rails (`gem 'bootstrap', '=4.0.0.alpha6'`) - bootstrap v4 [https://github.com/twbs/bootstrap-rubygem]
+- sprocket-rails (`gem 'sprockets-rails', '~>3.2.0'`) - installed for bootstrap
+- popper (`gem 'popper_js', '~> 1.12.3'`) - installed for bootstrap
+- rails-assets-tether (`gem 'rails-assets-tether', '>= 1.1.0'`) - installed for bootstrap
+- paperclip (`gem "paperclip", "~> 5.0.0"`) - file attachment management [https://github.com/thoughtbot/paperclip]
+- awk-sdk (`gem 'aws-sdk', '~> 2.3'`) - required to use AWS S3 to store files in production
+- color picker (`gem 'jquery-minicolors-rails'`) - user color selection [https://github.com/kostia/jquery-minicolors-rails]
+
+- ImageMagick - required for paperclip [https://www.imagemagick.org/script/download.php]
 
 bundle initially was not working when running in the Visual Studio Code terminal (it was working using git bash). The problem was that the path could not be located. Following a suggestion on the web, I replaced the code in C:\RailsInstaller\Ruby2.3.0\bin\bundle.bat to
 
@@ -135,12 +142,14 @@ GOTO :EOF
 ```
 
 I also ran into issues with bcrypt which wouldn't load (it is used by devise). This was due to the version of bcrypt that was installed. Devise installed
+
 ```
 $gem list bcrypt
 bcrypt (3.1.11 x86-mingw32)
 ```
 
 Solved by making sure the bcrypt version is just bcrypt (3.1.11)
+
 ```
 gem uninstall devise && gem uninstall bcrypt
 gem install bcrypt --platform=ruby
@@ -150,6 +159,7 @@ Added gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require
 ### Database
 
 I encountered problems with dropping/resetting the development database table which threw the following error
+
 ```
 Couldn't drop database 'db/development.sqlite3'
 rails aborted!
@@ -161,6 +171,7 @@ Tasks: TOP => db:drop:_unsafe
 ```
 
 In order to reset the table run
+
 ```
 $ rails db:drop:_unsafe
 $ rails db:create
@@ -173,6 +184,7 @@ $ rails db:seed
 [Instructions](https://devcenter.heroku.com/articles/paperclip-s3) on Heroku to set up Paperclip and AWS S3 for storage
 
 Some commands for pushing to production on Heroku
+
 ```
 $ git push heroku master
 $ heroku pg:reset DATABASE
@@ -182,10 +194,12 @@ $ heroku restart
 ```
 
 To uncompile/precompile assets if required (shouldn't be for rails 5)
+
 ```
 $RAILS_ENV=development rails assets:clobber
 $ bundle exec rails assets:precompile
 ```
+
 ### Capybara
 
 A useful [cheatsheet/guide](https://gist.github.com/zhengjia/428105)
