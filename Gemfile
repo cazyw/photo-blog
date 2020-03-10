@@ -30,7 +30,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
 gem 'capybara', '~> 3.0.0'
-gem 'simple_form', '~>3.5.0'
+gem 'simple_form', '~>5.0.0'
 gem 'bootstrap', '~> 4.3'
 gem 'sprockets-rails', '~>3.2.0'
 gem "paperclip", '~> 5.2.0'
